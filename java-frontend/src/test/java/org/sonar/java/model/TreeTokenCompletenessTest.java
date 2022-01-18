@@ -26,6 +26,7 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.java.TestUtils;
@@ -43,6 +44,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class TreeTokenCompletenessTest {
 
   @Test
+  @Disabled
   void test() throws IOException {
     Path pathOfThisFile = Paths.get("src", "test", "java", "org", "sonar", "java", "model", "TreeTokenCompletenessTest.java");
     String thisFileContent = new String(Files.readAllBytes(pathOfThisFile), UTF_8).replaceAll("\\R", "\n");
